@@ -1,0 +1,178 @@
+<Container>:
+    rows: 7
+    padding: 10
+    spacing: 5
+    canvas.before:
+        Color:
+            rgb: 255, 240, 199
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 0.4
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        BoxLayout:
+            Label:
+                bold: True
+                text: "Биомасса"
+                canvas.before:
+        BoxLayout:
+            Button:
+                text : "-"
+                bold: True
+                on_press:
+                    root.biomass_minus()
+            Label:
+                id: biomass
+                bold: True
+                text: "0"
+            Button:
+                text : "+"
+                bold: True
+                on_press:
+                    root.biomass_plus()
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 0.4
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        BoxLayout:
+            Label:
+                bold: True
+                text: "ОСБ"
+                canvas.before:
+        BoxLayout:
+            Button:
+                text : "-"
+                bold: True
+                on_press:
+                    root.osb_minus()
+            Label:
+                id: osb
+                bold: True
+                text: "0"
+            Button:
+                text : "+"
+                bold: True
+                on_press:
+                    root.osb_plus()
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 0.4
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        BoxLayout:
+            Label:
+                bold: True
+                text: "Чиппер"
+                canvas.before:
+        BoxLayout:
+            Button:
+                text : "-"
+                bold: True
+                on_press:
+                    root.сhipper_minus()
+            Label:
+                id: сhipper
+                bold: True
+                text: "0"
+            Button:
+                text : "+"
+                bold: True
+                on_press:
+                    root.сhipper_plus()
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 0.4
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        BoxLayout:
+            Label:
+                bold: True
+                text: "Дисковая"
+                canvas.before:
+        BoxLayout:
+            Button:
+                text : "-"
+                bold: True
+                on_press:
+                    root.disk_minus()
+            Label:
+                id: disk
+                bold: True
+                text: "0"
+            Button:
+                text : "+"
+                bold: True
+                on_press:
+                    root.disk_plus()
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 0.4
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        BoxLayout:
+            Label:
+                bold: True
+                text: "Роликовая"
+                canvas.before:
+        BoxLayout:
+            Button:
+                text : "-"
+                bold: True
+                on_press:
+                    root.roller_minus()
+            Label:
+                id: roller
+                bold: True
+                text: "0"
+            Button:
+                text : "+"
+                bold: True
+                on_press:
+                    root.roller_plus()
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 0.4
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        BoxLayout:
+            Label:
+                bold: True
+                text: "Рециклы"
+                canvas.before:
+        BoxLayout:
+            Button:
+                text : "-"
+                bold: True
+                on_press:
+                    root.recycling_minus()
+            Label:
+                id: recycling
+                bold: True
+                text: "0"
+            Button:
+                text : "+"
+                bold: True
+                on_press:
+                    root.recycling_plus()
+    BoxLayout:
+        Button:
+            text : "Новый день"
+            bold: True
+            on_press:
+                root.reset()
